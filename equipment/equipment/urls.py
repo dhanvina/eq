@@ -19,5 +19,5 @@ router.register(r'LabInchargeLogin', views.LabInchargeLoginViewSet, basename='La
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    # path('api/login/', views.Login_api, name='login_api'),
+    path('api/user/', include('lab.urls'))
 ]
