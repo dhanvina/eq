@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Department, Lab, PurchaseOrder, Equipment, EquipmentIssue, EquipmentReview, LabInCharge
+from .models import Department, Lab, PurchaseOrder, Equipment, EquipmentIssue, EquipmentReview, LabInCharge,LabInchargeRegister, LabInchargeLogin
 from rest_framework import serializers
 
 
@@ -39,3 +39,13 @@ class LabInChargeSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 
+class LabInchargeRegisterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LabInchargeRegister
+        fields = '__all__'
+
+
+class LabInchargeLoginSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LabInchargeLogin
+        fields = '__all__'

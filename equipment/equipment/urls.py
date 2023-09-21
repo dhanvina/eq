@@ -10,11 +10,14 @@ router.register(r'Labs', views.LabViewSet, basename='Lab')
 router.register(r'PurchaseOrders', views.PurchaseOrderViewSet, basename='PurchaseOrder')
 router.register(r'Equipments', views.EquipmentViewSet, basename='Equipment')
 router.register(r'EquipmentIssues', views.EquipmentIssueViewSet, basename='EquipmentIssue')
-router.register(r'labincharge', views.LabInChargeViewSet, basename='labIncharge')
+router.register(r'equipment_review', views.EquipmentReviewViewSet, basename='equipment_review')
+router.register(r'labincharge', views.LabInChargeViewSet, basename='LabIncharge')
+router.register(r'LabInchargeRegister', views.LabInchargeRegisterViewSet, basename='LabInchargeRegister')
+router.register(r'LabInchargeLogin', views.LabInchargeLoginViewSet, basename='LabInchargeLogin')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/login/', views.Login_api, name='login_api'),
+    # path('api/login/', views.Login_api, name='login_api'),
 ]
